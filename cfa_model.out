@@ -1,0 +1,483 @@
+Mplus VERSION 9.1.1 DEMO
+MUTHEN & MUTHEN
+11/11/2026  10:10 AM
+
+INPUT INSTRUCTIONS
+
+  TITLE:  examples for Mplus basic course
+
+  DATA:                 FILE IS C:\Users\kaapo\OneDrive\Tiedostot\Aineisto1.dat;
+
+  VARIABLE:             NAMES ARE
+    id sp omk1 omk2 omk3 omk4 omk5 omk6 omk1_2 omk2_2 omk3_2
+    omk4_2 omk5_2 omk6_2 k_omk5 k_omk6 k_omk5_2 k_omk6_2
+    VAR00002 omkmat omkluk omkmat_2 omkluk_2 matisum_1
+    matisum_2 luku1 luku2 VAR00003 mie1a mie1b mie1c
+    mie1d mie2a mie2b mie2c mie2d mie3a mie3b mie3c
+    mie3d miema mielu mieki mie1a_2 mie1b_2 mie1c_2
+    mie1d_2 mie2a_2 mie2b_2 mie2c_2 mie2d_2 mie3a_2
+    mie3b_2 mie3c_2 mie3d_2 miema_2 mielu_2 mieki_2;
+
+  USEVARIABLES ARE mie1c mie2c mie3c mie1c_2 mie2c_2 mie3c_2;
+
+  MISSING ARE ALL(99);
+
+
+  ANALYSIS:
+              ESTIMATOR = MLR;
+              TYPE = GENERAL;
+
+  MODEL: mat_interest1 BY mie1c mie2c mie3c;
+
+         mat_interest2 BY mie1c_2 mie2c_2 mie3c_2;
+
+
+         mat_interest1 WITH mat_interest2;
+         mie1c mie2c mie3c mie1c_2 mie2c_2 mie3c_2;
+
+         mie1c WITH mie1c_2;
+
+
+  OUTPUT: SAMP STAND MOD(8);
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+examples for Mplus basic course
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         167
+
+Number of dependent variables                                    6
+Number of independent variables                                  0
+Number of continuous latent variables                            2
+
+Observed dependent variables
+
+  Continuous
+   MIE1C       MIE2C       MIE3C       MIE1C_2     MIE2C_2     MIE3C_2
+
+Continuous latent variables
+   MAT_INTE    MAT_INTE
+
+
+Estimator                                                      MLR
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+
+Input data file(s)
+  C:\Users\kaapo\OneDrive\Tiedostot\Aineisto1.dat
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             5
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              MIE1C         MIE2C         MIE3C         MIE1C_2       MIE2C_2
+              ________      ________      ________      ________      ________
+ MIE1C          0.958
+ MIE2C          0.952         0.952
+ MIE3C          0.952         0.946         0.952
+ MIE1C_2        0.946         0.940         0.940         0.988
+ MIE2C_2        0.946         0.940         0.940         0.988         0.988
+ MIE3C_2        0.946         0.940         0.940         0.988         0.988
+
+
+           Covariance Coverage
+              MIE3C_2
+              ________
+ MIE3C_2        0.988
+
+
+SAMPLE STATISTICS
+
+
+     ESTIMATED SAMPLE STATISTICS
+
+
+           Means
+              MIE1C         MIE2C         MIE3C         MIE1C_2       MIE2C_2
+              ________      ________      ________      ________      ________
+                4.347         4.325         4.157         4.262         4.349
+
+
+           Means
+              MIE3C_2
+              ________
+                4.264
+
+
+           Covariances
+              MIE1C         MIE2C         MIE3C         MIE1C_2       MIE2C_2
+              ________      ________      ________      ________      ________
+ MIE1C          1.180
+ MIE2C          0.656         1.072
+ MIE3C          0.390         0.479         1.301
+ MIE1C_2        0.313         0.254         0.393         1.234
+ MIE2C_2        0.456         0.270         0.232         0.945         1.122
+ MIE3C_2        0.229         0.155         0.331         0.871         0.746
+
+
+           Covariances
+              MIE3C_2
+              ________
+ MIE3C_2        1.150
+
+
+           Correlations
+              MIE1C         MIE2C         MIE3C         MIE1C_2       MIE2C_2
+              ________      ________      ________      ________      ________
+ MIE1C          1.000
+ MIE2C          0.583         1.000
+ MIE3C          0.315         0.406         1.000
+ MIE1C_2        0.260         0.221         0.311         1.000
+ MIE2C_2        0.396         0.246         0.192         0.803         1.000
+ MIE3C_2        0.197         0.139         0.271         0.731         0.657
+
+
+           Correlations
+              MIE3C_2
+              ________
+ MIE3C_2        1.000
+
+
+     MAXIMUM LOG-LIKELIHOOD VALUE FOR THE UNRESTRICTED (H1) MODEL IS -1235.152
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     MIE1C                 4.350      -1.608       1.000    3.75%       3.000      5.000      5.000
+             160.000       1.178       1.649       5.000   67.50%       5.000      5.000
+     MIE2C                 4.327      -1.462       1.000    1.89%       4.000      5.000      5.000
+             159.000       1.075       1.153       5.000   62.89%       5.000      5.000
+     MIE3C                 4.157      -1.275       1.000    4.40%       3.000      4.000      5.000
+             159.000       1.302       0.685       5.000   54.72%       5.000      5.000
+     MIE1C_2               4.261      -1.533       1.000    4.85%       3.000      4.000      5.000
+             165.000       1.235       1.534       5.000   60.00%       5.000      5.000
+     MIE2C_2               4.345      -1.731       1.000    4.24%       4.000      5.000      5.000
+             165.000       1.123       2.303       5.000   63.64%       5.000      5.000
+     MIE3C_2               4.261      -1.416       1.000    3.64%       3.000      4.000      5.000
+             165.000       1.150       1.248       5.000   59.39%       5.000      5.000
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       20
+
+Loglikelihood
+
+          H0 Value                       -1246.941
+          H0 Scaling Correction Factor      1.6841
+            for MLR
+          H1 Value                       -1235.152
+          H1 Scaling Correction Factor      1.6162
+            for MLR
+
+Information Criteria
+
+          Akaike (AIC)                    2533.883
+          Bayesian (BIC)                  2596.242
+          Sample-Size Adjusted BIC        2532.920
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                             16.581*
+          Degrees of Freedom                     7
+          P-Value                           0.0203
+          Scaling Correction Factor         1.4221
+            for MLR
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.091
+          90 Percent C.I.                    0.033  0.148
+          Probability RMSEA <= .05           0.104
+
+CFI/TLI
+
+          CFI                                0.958
+          TLI                                0.911
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            245.553
+          Degrees of Freedom                    15
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.050
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ MAT_INTE BY
+    MIE1C              1.000      0.000    999.000    999.000
+    MIE2C              0.933      0.182      5.117      0.000
+    MIE3C              0.705      0.167      4.222      0.000
+
+ MAT_INTE BY
+    MIE1C_2            1.000      0.000    999.000    999.000
+    MIE2C_2            0.868      0.091      9.496      0.000
+    MIE3C_2            0.771      0.088      8.739      0.000
+
+ MAT_INTE WITH
+    MAT_INTERE         0.390      0.133      2.926      0.003
+
+ MIE1C    WITH
+    MIE1C_2           -0.124      0.054     -2.299      0.022
+
+ Intercepts
+    MIE1C              4.352      0.085     50.933      0.000
+    MIE2C              4.326      0.082     52.783      0.000
+    MIE3C              4.153      0.090     45.908      0.000
+    MIE1C_2            4.255      0.087     49.111      0.000
+    MIE2C_2            4.343      0.082     52.698      0.000
+    MIE3C_2            4.259      0.084     50.907      0.000
+
+ Variances
+    MAT_INTERE         0.678      0.191      3.558      0.000
+    MAT_INTERE         1.116      0.194      5.754      0.000
+
+ Residual Variances
+    MIE1C              0.497      0.144      3.446      0.001
+    MIE2C              0.481      0.159      3.026      0.002
+    MIE3C              0.967      0.165      5.869      0.000
+    MIE1C_2            0.142      0.071      1.997      0.046
+    MIE2C_2            0.281      0.092      3.047      0.002
+    MIE3C_2            0.487      0.106      4.575      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.381E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ MAT_INTE BY
+    MIE1C              0.760      0.079      9.611      0.000
+    MIE2C              0.742      0.093      8.012      0.000
+    MIE3C              0.508      0.082      6.164      0.000
+
+ MAT_INTE BY
+    MIE1C_2            0.942      0.031     30.606      0.000
+    MIE2C_2            0.866      0.052     16.787      0.000
+    MIE3C_2            0.759      0.063     12.042      0.000
+
+ MAT_INTE WITH
+    MAT_INTERE         0.448      0.117      3.822      0.000
+
+ MIE1C    WITH
+    MIE1C_2           -0.467      0.210     -2.225      0.026
+
+ Intercepts
+    MIE1C              4.015      0.366     10.958      0.000
+    MIE2C              4.179      0.362     11.557      0.000
+    MIE3C              3.637      0.302     12.054      0.000
+    MIE1C_2            3.794      0.344     11.033      0.000
+    MIE2C_2            4.100      0.398     10.311      0.000
+    MIE3C_2            3.972      0.343     11.566      0.000
+
+ Variances
+    MAT_INTERE         1.000      0.000    999.000    999.000
+    MAT_INTERE         1.000      0.000    999.000    999.000
+
+ Residual Variances
+    MIE1C              0.423      0.120      3.521      0.000
+    MIE2C              0.449      0.138      3.262      0.001
+    MIE3C              0.742      0.084      8.851      0.000
+    MIE1C_2            0.113      0.058      1.943      0.052
+    MIE2C_2            0.251      0.089      2.806      0.005
+    MIE3C_2            0.423      0.096      4.419      0.000
+
+
+STDY Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ MAT_INTE BY
+    MIE1C              0.760      0.079      9.611      0.000
+    MIE2C              0.742      0.093      8.012      0.000
+    MIE3C              0.508      0.082      6.164      0.000
+
+ MAT_INTE BY
+    MIE1C_2            0.942      0.031     30.606      0.000
+    MIE2C_2            0.866      0.052     16.787      0.000
+    MIE3C_2            0.759      0.063     12.042      0.000
+
+ MAT_INTE WITH
+    MAT_INTERE         0.448      0.117      3.822      0.000
+
+ MIE1C    WITH
+    MIE1C_2           -0.467      0.210     -2.225      0.026
+
+ Intercepts
+    MIE1C              4.015      0.366     10.958      0.000
+    MIE2C              4.179      0.362     11.557      0.000
+    MIE3C              3.637      0.302     12.054      0.000
+    MIE1C_2            3.794      0.344     11.033      0.000
+    MIE2C_2            4.100      0.398     10.311      0.000
+    MIE3C_2            3.972      0.343     11.566      0.000
+
+ Variances
+    MAT_INTERE         1.000      0.000    999.000    999.000
+    MAT_INTERE         1.000      0.000    999.000    999.000
+
+ Residual Variances
+    MIE1C              0.423      0.120      3.521      0.000
+    MIE2C              0.449      0.138      3.262      0.001
+    MIE3C              0.742      0.084      8.851      0.000
+    MIE1C_2            0.113      0.058      1.943      0.052
+    MIE2C_2            0.251      0.089      2.806      0.005
+    MIE3C_2            0.423      0.096      4.419      0.000
+
+
+STD Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ MAT_INTE BY
+    MIE1C              0.824      0.116      7.116      0.000
+    MIE2C              0.768      0.113      6.828      0.000
+    MIE3C              0.580      0.102      5.685      0.000
+
+ MAT_INTE BY
+    MIE1C_2            1.056      0.092     11.508      0.000
+    MIE2C_2            0.917      0.108      8.504      0.000
+    MIE3C_2            0.814      0.103      7.891      0.000
+
+ MAT_INTE WITH
+    MAT_INTERE         0.448      0.117      3.822      0.000
+
+ MIE1C    WITH
+    MIE1C_2           -0.124      0.054     -2.299      0.022
+
+ Intercepts
+    MIE1C              4.352      0.085     50.933      0.000
+    MIE2C              4.326      0.082     52.783      0.000
+    MIE3C              4.153      0.090     45.908      0.000
+    MIE1C_2            4.255      0.087     49.111      0.000
+    MIE2C_2            4.343      0.082     52.698      0.000
+    MIE3C_2            4.259      0.084     50.907      0.000
+
+ Variances
+    MAT_INTERE         1.000      0.000    999.000    999.000
+    MAT_INTERE         1.000      0.000    999.000    999.000
+
+ Residual Variances
+    MIE1C              0.497      0.144      3.446      0.001
+    MIE2C              0.481      0.159      3.026      0.002
+    MIE3C              0.967      0.165      5.869      0.000
+    MIE1C_2            0.142      0.071      1.997      0.046
+    MIE2C_2            0.281      0.092      3.047      0.002
+    MIE3C_2            0.487      0.106      4.575      0.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    MIE1C              0.577      0.120      4.806      0.000
+    MIE2C              0.551      0.138      4.006      0.000
+    MIE3C              0.258      0.084      3.082      0.002
+    MIE1C_2            0.887      0.058     15.303      0.000
+    MIE2C_2            0.749      0.089      8.394      0.000
+    MIE3C_2            0.577      0.096      6.021      0.000
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates may not be included.  To include these, request
+MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index     8.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+No modification indices above the minimum value.
+
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\users\kaapo\onedrive\tiedostot\uef\maisteri\basic course for structural equation modeling\final assignment\final
+
+     Beginning Time:  10:10:50
+        Ending Time:  10:10:50
+       Elapsed Time:  00:00:00
+
+
+Mplus VERSION 9.1.1 DEMO has the following limitations:
+  Maximum number of dependent variables: 6
+  Maximum number of independent variables: 2
+  Maximum number of between variables: 2
+  Maximum number of continuous latent variables in time series analysis: 2
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2026 Muthen & Muthen

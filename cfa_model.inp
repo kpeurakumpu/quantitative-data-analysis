@@ -1,0 +1,35 @@
+TITLE:  examples for Mplus basic course
+
+DATA:                 FILE IS C:\Users\kaapo\OneDrive\Tiedostot\Aineisto1.dat;
+
+VARIABLE:             NAMES ARE
+  id sp omk1 omk2 omk3 omk4 omk5 omk6 omk1_2 omk2_2 omk3_2
+  omk4_2 omk5_2 omk6_2 k_omk5 k_omk6 k_omk5_2 k_omk6_2
+  VAR00002 omkmat omkluk omkmat_2 omkluk_2 matisum_1
+  matisum_2 luku1 luku2 VAR00003 mie1a mie1b mie1c
+  mie1d mie2a mie2b mie2c mie2d mie3a mie3b mie3c
+  mie3d miema mielu mieki mie1a_2 mie1b_2 mie1c_2
+  mie1d_2 mie2a_2 mie2b_2 mie2c_2 mie2d_2 mie3a_2
+  mie3b_2 mie3c_2 mie3d_2 miema_2 mielu_2 mieki_2;
+
+USEVARIABLES ARE mie1c mie2c mie3c mie1c_2 mie2c_2 mie3c_2;
+
+MISSING ARE ALL(99); 
+
+
+ANALYSIS:   
+            ESTIMATOR = MLR;
+            TYPE = GENERAL;
+            
+MODEL: mat_interest1 BY mie1c mie2c mie3c;
+
+       mat_interest2 BY mie1c_2 mie2c_2 mie3c_2;
+       
+        
+       mat_interest1 WITH mat_interest2;
+       mie1c mie2c mie3c mie1c_2 mie2c_2 mie3c_2;
+       
+       mie1c WITH mie1c_2;                            
+                      
+
+OUTPUT: SAMP STAND MOD(8); 
