@@ -1,6 +1,6 @@
-TITLE:  examples for Mplus basic course
+TITLE: CFA Analysis
 
-DATA:                 FILE IS C:\Users\kaapo\OneDrive\Tiedostot\Aineisto1.dat;
+DATA:                 FILE IS dataset.dat;
 
 VARIABLE:             NAMES ARE
   id sp omk1 omk2 omk3 omk4 omk5 omk6 omk1_2 omk2_2 omk3_2
