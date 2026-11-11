@@ -113,12 +113,13 @@ quantitative-data-analysis/
 │   └── cfa_results.xlsx
 │
 ├── figures/
+│   ├── correlation_matrix.png
+│   ├── regression_coefficients.png
+│   └── cfa_model.png
 │
 └── data/
     └── README.md
 ```
-
-*Actual filenames may differ.*
 
 ## 7. Data and Reproducibility
 
