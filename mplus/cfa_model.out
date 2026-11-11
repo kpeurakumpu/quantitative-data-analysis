@@ -4,9 +4,9 @@ MUTHEN & MUTHEN
 
 INPUT INSTRUCTIONS
 
-  TITLE:  examples for Mplus basic course
+  TITLE:  CFA Analysis
 
-  DATA:                 FILE IS C:\Users\kaapo\OneDrive\Tiedostot\Aineisto1.dat;
+  DATA:                 FILE IS dataset.dat;
 
   VARIABLE:             NAMES ARE
     id sp omk1 omk2 omk3 omk4 omk5 omk6 omk1_2 omk2_2 omk3_2
@@ -75,7 +75,7 @@ Maximum number of iterations for H1                           2000
 Convergence criterion for H1                             0.100D-03
 
 Input data file(s)
-  C:\Users\kaapo\OneDrive\Tiedostot\Aineisto1.dat
+  dataset.dat
 
 Input data format  FREE
 
@@ -448,20 +448,6 @@ Minimum M.I. value for printing the modification index     8.000
                                    M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
 
 No modification indices above the minimum value.
-
-
-
-DIAGRAM INFORMATION
-
-  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
-  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
-
-  Diagram output
-    c:\users\kaapo\onedrive\tiedostot\uef\maisteri\basic course for structural equation modeling\final assignment\final
-
-     Beginning Time:  10:10:50
-        Ending Time:  10:10:50
-       Elapsed Time:  00:00:00
 
 
 Mplus VERSION 9.1.1 DEMO has the following limitations:
