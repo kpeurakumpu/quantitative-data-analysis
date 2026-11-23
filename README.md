@@ -112,11 +112,6 @@ quantitative-data-analysis/
 │   ├── regression_results.xlsx
 │   └── cfa_results.xlsx
 │
-├── figures/
-│   ├── correlation_matrix.png
-│   ├── regression_coefficients.png
-│   └── cfa_model.png
-│
 └── data/
     └── README.md
 ```
